@@ -173,6 +173,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D ENABLE_FAST_MATH=1 \
     -D CUDA_FAST_MATH=1 \
     -D WITH_CUBLAS=1 \
+    -D CUDA_CUDA_LIBRARY=/usr/local/cuda/lib64/stubs/libcuda.so
     ..
 make -j4
 make install
