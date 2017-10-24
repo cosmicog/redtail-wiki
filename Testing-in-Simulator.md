@@ -178,6 +178,15 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 make -j4
 make install
 ```
+If it gives this error when compiling: 
+```
+/usr/local/nvidia/lib/libcuda.so: error adding symbols: File in wrong format
+collect2: error: ld returned 1 exit status
+```
+Add this line to command above and try again:
+```
+-D CUDA_CUDA_LIBRARY=/usr/local/cuda/lib64/stubs/libcuda.so
+```
 
 # Building PX4 software stack
 ## Update GCC
